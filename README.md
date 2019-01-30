@@ -34,7 +34,7 @@
 ---
 
 ## Introduction
-Simple nodeJs backend with simple logic and some statistics about SlotMachine game frontend 
+Simple nodeJs backend with simple logic and some statistics about SlotMachine game <a href="https://github.com/usamahamed/SlotMachine-backend">frontend</a>
 
 ### Tech Used:
 -  express,
