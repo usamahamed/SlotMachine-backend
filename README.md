@@ -56,4 +56,8 @@ Simple nodeJs backend with simple logic and some statistics about SlotMachine ga
 - start the server via ```npm start```
 - open browser on port 3000
 
+### test
+```npm test```
+
+
 <!-- [START getstarted] -->
