@@ -1,0 +1,33 @@
+{
+  "name": "slotgame-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha ./tests --recursive",
+    "jest": "jest --coverage ./tests/*.test.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "^2.6.1",
+    "express": "~4.14.0",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "path": "^0.12.7",
+    "serve-favicon": "~2.3.0"
+  },
+  "proxy": "http://localhost:8080",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "jest": "^21.2.1",
+    "mocha": "^5.2.0",
+    "moxios": "^0.4.0",
+    "superagent": "^4.1.0",
+    "supertest": "^3.4.2"
+  }
+}

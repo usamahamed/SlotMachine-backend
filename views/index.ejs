@@ -1,0 +1,133 @@
+    <% include ./header %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+<h1 style="    color: #e45b57;
+    text-align: center;
+    margin-top: 1rem;">NetEnt SlotMachine Server</h1>
+
+<!-- Services section -->
+<div class="container main__services">
+  <div class="row">
+          <div class="col-lg-3 col-xs-6">
+            <div class="rad-info-box rad-txt-success">
+              <i class="fa fa-truck"></i>
+              <span class="heading">Balance</span>
+         <span class="value"><span><%=Totalbalance.slice(-1)[0] || 10000 %></span></span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-xs-6">
+            <div class="rad-info-box rad-txt-primary">
+              <i class="fa fa-hand-o-down"></i>
+              <span class="heading">Bets count</span>
+              <span class="value"><span><%= totalbet %></span></span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-xs-6">
+            <div class="rad-info-box rad-txt-danger">
+              <i class="fa fa-at"></i>
+              <span class="heading">wins points</span>
+              <span class="value"><span><%= totalwin %></span></span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-xs-6">
+            <div class="rad-info-box">
+              <i class="fa fa-outdent"></i>
+              <span class="heading">Actual RTL</span>
+              <span class="value"><span><%= isNaN(((totalwin/totalbet)).toFixed(0))? 0 : ((totalwin/totalbet)).toFixed(0) %> %</span></span>
+            </div>
+          </div>
+        </div>
+</div>
+<!-- Game statistics -->
+<div class="content">
+  <div class="mainInfo">
+    <h1>NetEnt SlotMachine</h1>
+    <span>Game V1</span>
+    <div class="aboutMe">
+      <h3>About</h3>
+      Simple slot machine game built with React in frontend and simple nodejs
+      logic with some statistics.
+    </div>
+  </div>
+  <div class="matchStats">
+    <div class="backgroundText">Games</div>
+    <canvas data-lose=<%= 100-win_prec %> data-win=<%= win_prec %>  id="gameStats" width="180" height="180"/>
+  </div>
+
+  <div class="matchStats">
+    <div class="backgroundText">Roles</div>
+    <canvas id="roleStats" width="180" height="180"/>
+  </div>
+
+  <div class="clearFix"></div>
+
+  <div class="col">
+    <h2>Win/Lose Stat</h2>
+    <div class="resizing">
+      <canvas id="champData"/>
+    </div>
+  </div>
+  <div class="col middle">
+    <h2>RTL Stat</h2>
+    <div class="resizing">
+      <canvas data-RTL=<%= ((totalwin/totalbet)).toFixed(0) %>  id="timeData"/>
+    </div>
+  </div>
+  <div class="col">
+    <h2>Stats</h2>
+    <ul class="playerStats">
+      <li><span>BALANCE:</span> <%=Totalbalance.slice(-1)[0] || 0%></li>
+      <li><span>TOTAL BETS:</span><%= totalbet %></li>
+      <li><span>TOTAL WINS:</span><%= totalwin %></li>
+      <li><span>RTL:</span> <%= isNaN(((totalwin/totalbet)).toFixed(0))? 0 : ((totalwin/totalbet)).toFixed(0) %> %</li>
+    </ul>
+  </div>
+</div>
+
+
+
+      <table summary="This table shows how to create responsive tables using Datatables' extended functionality" class="table table-bordered table-hover dt-responsive">
+        <caption class="text-center">NetEnt slotMachine game roundes <a href="https://netent.com" target="_blank">NetEnt</a>:</caption>
+        <thead>
+          <tr>
+            <th>Round Status</th> 
+            <th>Current RTL</th> 
+            <th>Current Balance</th> 
+            <th>Credit win</th> 
+            <th>Random Draw</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i < tableData.length; i++) { %>
+<!--                 <% if(tableData[i][i] != null) { %>
+ -->          <tr>
+   <td><% if(tableData[1][i].countValue == 0){ %><span class="label label-warning">Lose</span><% } else{ %><span class="label label-success">Win</span><% } %></td>
+            <td><%=((totalwin/totalbet)).toFixed(0) %> %</td>
+            <td><%= tableData[2][i] %></td>
+            <td><%= tableData[1][i].countValue %></td>
+            <td><%= tableData[0][i]  %></td>
+          </tr>
+          
+<!--           <% } %>
+ --><% } %>
+         
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5" class="text-center">Data retrieved from <a href="http://localhost:8080/" target="_blank">NetEnt SlotMachine</a>.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
+
+<p class="p">Demo by Usama Hamed <a href="http://usamahamed.tk" target="_blank">See more</a>.</p>
+
+<div class="refresh"></div>
+    <% include ./footer %>
+
+   

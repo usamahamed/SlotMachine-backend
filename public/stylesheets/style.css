@@ -1,0 +1,268 @@
+body { 
+  font-size: 140%; 
+}
+
+h2 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+table caption {
+    padding: .5em 0;
+}
+
+table.dataTable th,
+table.dataTable td {
+  white-space: nowrap;
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+
+
+.refresh {
+  background: #4e4e4e url(https://cbwconline.com/IMG/Codepen/Blue%20Refresh.svg) center/36px no-repeat;
+  height: 56px;
+  width: 56px;
+  margin: 1em;
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+
+
+.main__services{
+  margin: 4rem 0; 
+}
+
+   
+.rad-info-box {
+  margin-bottom: 16px;
+  box-shadow: 1px 1px 2px 0 #CCCCCC;
+  padding: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background: white !important;
+}
+
+.rad-info-box i {
+  display: block;
+  background-clip: padding-box;
+  margin-right: 15px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 4.4em;
+  position: absolute;
+}
+
+.rad-info-box .value,
+.rad-info-box .heading {
+  display: block;
+  position: relative;
+  color: #515d6e;
+  text-align: right;
+  z-index: 10;
+}
+
+.rad-info-box .heading {
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.rad-info-box .value {
+  font-size: 2.1em;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.rad-txt-primary {
+  color: #1C7EBB;
+}
+
+
+
+.rad-txt-success {
+  color: #23AE89;
+}
+
+
+
+.rad-txt-danger {
+  color: #E94B3B;
+}
+
+
+.rad-txt-warning {
+  color: #F98E33;
+}
+
+@media screen and (max-width: 450px) {
+  .rad-info-box i {
+    opacity: .3;
+  }
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background: #FCFCFC;
+}
+.content {
+  min-width: 1000px;
+  width: 60%;
+  max-width: 1200px;
+  height: 440px;
+  background: #222;
+  border-radius: 6px;
+  margin: 20px auto;
+}
+.stats {
+  height: 200px;
+}
+
+.col {
+  width: 33.33%;
+  height: 200px;
+  float: left;
+  padding: 10px;
+  position: relative;
+}
+
+.middle:before, .middle:after {
+  content: "";
+  height: 80%;
+  border: 1px solid #333;
+  position: absolute;
+  top: 0; bottom: 0;
+  margin: auto;
+}
+.middle:before {
+  left: 0;
+}
+.middle:after {
+  right: 0;
+}
+
+.matchStats {
+  float: right;
+  width: 300px;
+  height: 240px;
+  position: relative;
+}
+#gameStats, #roleStats {
+  position: absolute;
+  top: 0; bottom: 0; right: 20px;
+  margin: auto;
+}
+#champData {
+  position: absolute;
+  top: 0; bottom: 0; right: -10px;
+  margin: auto;
+}
+#timeData {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+}
+
+.mainInfo {
+  height: 240px;
+  padding: 20px;
+  width: calc(100% - 600px);
+  float: left;
+}
+.mainInfo span {
+  color: #999;
+}
+
+.mainInfo .aboutMe {
+  font-size: 12px;
+  color: #999;
+}
+h1 {
+  color: #fff;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: #FDB45C;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  display: block;
+  position: absolute;
+  top: -5px; left: 10px;
+}
+h3 {
+  display: block;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 2px solid #333;color: #FDB45C;
+}
+.clearFix {
+  clear: both;
+}
+
+.playerStats {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  margin: 6px;
+}
+.playerStats li {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+}
+.playerStats li span {
+  display: inline-block;
+  width: 60%;
+  color: #999;
+}
+
+.backgroundText {
+  width: 100%;
+  height: 100%;
+  font-size: 56px;
+  color: rgba(255, 255, 255, 0.2);
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.resizing {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  left: 0; right: 0;
+  margin: auto;
+  bottom: 0;
+}
